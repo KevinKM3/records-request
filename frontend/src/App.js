@@ -1,10 +1,14 @@
 import "./App.css";
+import Footer from "./components/Footer/Footer";
+import Header from "./components/Header/Header";
 
 const App = () => {
   return (
-    <div className="App">
-      <h1>Records Request Manager 2021</h1>
-    </div>
+    <>
+      <Header />
+      <main style={{ minHeight: "93vh" }}></main>
+      <Footer />
+    </>
   );
 };
 
