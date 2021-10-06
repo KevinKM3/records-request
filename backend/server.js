@@ -2,11 +2,16 @@ const express = require("express");
 
 const requests = require("./data/requests");
 
-const dotenv = require("dotenv");
+require("dotenv").config({ path: "../.env" });
+
+// const dotenv = require("dotenv");
+const connectDB = require("./config/db");
 
 const app = express();
 
-dotenv.config();
+// dotenv.config();
+
+connectDB();
 
 // API endpoints - retrieve data
 app.get("/", (req, res) => {
@@ -16,13 +21,6 @@ app.get("/", (req, res) => {
 // Retrieve all requests
 app.get("/api/requests", (req, res) => {
   res.json(requests);
-});
-
-// Retrieve single request
-app.get("/api/requests/:id", (req, res) => {
-  const request = requests.find((r) => r._id === req.params.id);
-
-  res.send(request);
 });
 
 // Created the web server
