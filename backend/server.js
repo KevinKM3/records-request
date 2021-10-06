@@ -4,14 +4,16 @@ const requests = require("./data/requests");
 
 require("dotenv").config({ path: "../.env" });
 
+const userRoutes = require("./routes/userRoutes");
+const app = express();
 // const dotenv = require("dotenv");
 const connectDB = require("./config/db");
-
-const app = express();
+const { notFound, errorHandler } = require("./middleware/errorMiddleware");
 
 // dotenv.config();
 
 connectDB();
+app.use(express.json());
 
 // API endpoints - retrieve data
 app.get("/", (req, res) => {
@@ -22,6 +24,12 @@ app.get("/", (req, res) => {
 app.get("/api/requests", (req, res) => {
   res.json(requests);
 });
+
+app.use("/api/users", userRoutes);
+
+//middleware
+app.use(notFound);
+app.use(errorHandler);
 
 // Created the web server
 
