@@ -2,7 +2,7 @@
 
 Record request application.
 
-A full stack MERN application used to complete CRUD operations for a sample user requesting records. built with React for the frontend, Redux for state management, JavaScript, CSS, React Bootstrap for styling.
+A full stack MERN application used to complete CRUD operations for a sample user requesting records. built with React for the frontend, Redux for state management, JavaScript, CSS, React Bootstrap for styling. Mongo DB for database storage. 
 
 ## Project Status
 
@@ -18,7 +18,7 @@ This project is currently in development. Users can filter records request by us
 ![request](https://github.com/KevinKM3/records-request/blob/main/recordapp1.png)
 
 
-[ PRETEND OTHER SCREEN SHOT IS HERE ]
+
 
 ## Installation and Setup Instructions
 
