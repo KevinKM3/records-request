@@ -5,7 +5,7 @@ import {
   REQUESTS_LIST_SUCCESS,
 } from "../constants/requestConstants";
 
-export const requestNotes = () => async (dispatch, getState) => {
+export const listRequests = () => async (dispatch, getState) => {
   try {
     dispatch({
       type: REQUESTS_LIST_REQUEST,

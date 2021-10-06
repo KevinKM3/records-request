@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 import { NavLink, Button, Table } from "react-bootstrap";
 import MainScreen from "../../components/MainScreen";
-import { useDispatch, useSelector } from "react-router-dom";
-import axios from "axios";
+import { useDispatch, useSelector } from "react-redux";
+
+import { listRequests } from "../../actions/requestActions";
 
 const MyRequests = () => {
   // handle data with state
@@ -19,14 +20,10 @@ const MyRequests = () => {
     }
   };
 
-  const fetchRequests = async () => {
-    const { data } = await axios.get("/api/requests");
-    setRequests(data);
-  };
   console.log(requests);
   useEffect(() => {
-    fetchRequests();
-  }, []);
+    dispatch(listRequests());
+  }, [dispatch]);
 
   return (
     <MainScreen title="Hello Kevin, Welcome Back!!">
