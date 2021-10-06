@@ -1,12 +1,17 @@
 import { useEffect, useState } from "react";
 import { NavLink, Button, Table } from "react-bootstrap";
 import MainScreen from "../../components/MainScreen";
-
+import { useDispatch, useSelector } from "react-router-dom";
 import axios from "axios";
 
 const MyRequests = () => {
-  // handle dat with state
-  const [requests, setRequests] = useState([]);
+  // handle data with state
+
+  const dispatch = useDispatch();
+
+  const requestList = useSelector((state) => state.requestList);
+
+  const { loading, requests, error } = requestList;
 
   // Delete handler for button
   const deleteHandler = (id) => {
@@ -39,16 +44,17 @@ const MyRequests = () => {
                 <th>Request Date</th>
                 <th>Expiration Date</th>
                 <th>Requester</th>
+                <th>Action</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>{request._id} </td>
-                <td>{request.request_text}</td>
-                <td>{request.department_names}</td>
-                <td>{request.request_due_date}</td>
-                <td>{request.expiration_data}</td>
-                <td>{request.requester}</td>
+                <td style={{ width: "20%" }}>{request._id} </td>
+                <td style={{ width: "20%" }}>{request.request_text}</td>
+                <td style={{ width: "20%" }}>{request.department_names}</td>
+                <td style={{ width: "20%" }}>{request.request_due_date}</td>
+                <td style={{ width: "20%" }}>{request.expiration_data}</td>
+                <td style={{ width: "20%" }}>{request.requester}</td>
                 <td>
                   <Button href={`/request/${request._id}`} size="sm">
                     Edit

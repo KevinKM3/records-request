@@ -5,6 +5,7 @@ const requests = require("./data/requests");
 require("dotenv").config({ path: "../.env" });
 
 const userRoutes = require("./routes/userRoutes");
+const requestRoutes = require("./routes/requestRoutes");
 const app = express();
 // const dotenv = require("dotenv");
 const connectDB = require("./config/db");
@@ -26,6 +27,7 @@ app.get("/api/requests", (req, res) => {
 });
 
 app.use("/api/users", userRoutes);
+app.use("/api/requests", requestRoutes);
 
 //middleware
 app.use(notFound);

@@ -1,4 +1,4 @@
-import mongoose from "mongoose";
+const mongoose = require("mongoose");
 
 const requestSchema = mongoose.Schema({
   request_text: {
@@ -25,4 +25,4 @@ const requestSchema = mongoose.Schema({
 
 const Request = mongoose.model("Request", requestSchema);
 
-export default Request;
+module.exports = Request;

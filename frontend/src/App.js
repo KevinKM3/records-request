@@ -11,6 +11,8 @@ const App = () => {
       <Header />
       <main>
         <Route path="/" component={Home} exact />
+        {/* <Route path="/login" component={LoginPage} exact />
+        <Route path="/register" component={RegisterPage} exact /> */}
         <Route path="/myrequests" component={MyRequests} />
       </main>
       <Footer />
