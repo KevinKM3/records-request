@@ -6,7 +6,7 @@ A full stack MERN application used to complete CRUD operations for a sample user
 
 ## Project Status
 
-I still need to make user functionality and authentication.
+I working on user functionality and authentication.
 
 This project is currently in development. Users can filter records request by username and keyword and see visual data representation. The functionality to sort and search by parameters is in progress.
 
@@ -14,7 +14,9 @@ This project is currently in development. Users can filter records request by us
 
 #### Example:
 
-[ PRETEND SCREEN SHOT IS HERE ]
+![records](https://github.com/KevinKM3/records-request/blob/main/recordapp.png)
+![request](https://github.com/KevinKM3/records-request/blob/main/recordapp1.png)
+
 
 [ PRETEND OTHER SCREEN SHOT IS HERE ]
 
