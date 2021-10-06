@@ -5,7 +5,7 @@ const Footer = () => {
     <footer
       style={{
         width: "100%",
-        position: "relative",
+        position: "absolute",
         bottom: 0,
         display: "flex",
         justifyContent: "center",
@@ -14,7 +14,7 @@ const Footer = () => {
       <Container>
         <Row>
           <Col className="text-center py-3">
-            Copywright &copy; 2021 Record Manager
+            Copyright &copy; 2021 Record Manager
           </Col>
         </Row>
       </Container>
