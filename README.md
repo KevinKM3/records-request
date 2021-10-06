@@ -6,7 +6,8 @@ A full stack MERN application used to complete CRUD operations for a sample user
 
 ## Project Status
 
-I working on user functionality and authentication.
+
+I'm working on user functionality and authentication. Users should only see their request.
 
 This project is currently in development. Users can filter records request by username and keyword and see visual data representation. The functionality to sort and search by parameters is in progress.
 
@@ -16,6 +17,7 @@ This project is currently in development. Users can filter records request by us
 
 ![records](https://github.com/KevinKM3/records-request/blob/main/recordapp.png)
 ![request](https://github.com/KevinKM3/records-request/blob/main/recordapp1.png)
+![request](https://github.com/KevinKM3/records-request/blob/main/mongo.png)
 
 
 
@@ -24,7 +26,23 @@ This project is currently in development. Users can filter records request by us
 
 Clone down this repository. You will need `node` and `npm` installed globally on your machine.
 
-Installation:
+Front End Installation:
+
+`npm install`
+
+To Run Test Suite:
+
+`npm test`
+
+To Start Front End Server:
+
+`npm start`
+
+To Visit App:
+
+`localhost:3000/requests`
+
+Backend:
 
 `npm install`
 
@@ -36,6 +54,6 @@ To Start Server:
 
 `npm start`
 
-To Visit App:
+To Visit Backend:
 
-`localhost:3000/requests`
+`localhost:3001/api/requests
