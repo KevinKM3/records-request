@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { NavLink, Button, Table } from "react-bootstrap";
 import MainScreen from "../../components/MainScreen";
 import { useDispatch, useSelector } from "react-redux";
@@ -12,7 +12,7 @@ const MyRequests = () => {
 
   const requestList = useSelector((state) => state.requestList);
 
-  const { loading, requests, error } = requestList;
+  const { requests } = requestList;
 
   // Delete handler for button
   const deleteHandler = (id) => {

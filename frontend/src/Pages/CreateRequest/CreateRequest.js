@@ -2,9 +2,10 @@ import React, { useEffect, useState } from "react";
 import MainScreen from "../../components/MainScreen";
 import { Button, Card, Form } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
-import ReactMarkdown from "react-markdown";
+// import ReactMarkdown from "react-markdown";
+import axios from "axios";
 import {
-  createRequestAction,
+  //   createRequestAction,
   updateRequestAction,
 } from "../../actions/requestActions";
 
@@ -15,7 +16,8 @@ const CreateRequest = ({ match, history }) => {
   const [department_names, setDepartment_names] = useState("");
   const [requester, setRequester] = useState("");
 
-  //   request_text,
+  //  PARAMS
+  //    request_text,
   //         request_due_date,
   //         expiration_date,
   //         department_names,
@@ -24,10 +26,10 @@ const CreateRequest = ({ match, history }) => {
   const dispatch = useDispatch();
 
   const requestUpdate = useSelector((state) => state.requestUpdate);
-  const { error } = requestUpdate;
+  requestUpdate();
 
   const requestDelete = useSelector((state) => state.requestDelete);
-  const { error: errorDelete } = requestDelete;
+  requestDelete();
 
   const deleteHandler = (id) => {
     if (window.confirm("Are you sure?")) {
@@ -111,9 +113,7 @@ const CreateRequest = ({ match, history }) => {
             {request_due_date && (
               <Card>
                 <Card.Header>Request Preview</Card.Header>
-                <Card.Body>
-                  <ReactMarkdown>{request_due_date}</ReactMarkdown>
-                </Card.Body>
+                <Card.Body>{request_due_date}</Card.Body>
               </Card>
             )}
 
